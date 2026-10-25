@@ -2,6 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Patterns\Logger;
+use App\Patterns\Money;
 use Illuminate\Console\Attributes\Description;
 use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
@@ -13,8 +15,9 @@ class TestCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
-        //
+        Logger::getInstance()->log('Пример');
+        Money::fromCents(52);
     }
 }

@@ -6,6 +6,7 @@ namespace App\Patterns;
 
 use BadMethodCallException;
 
+// Singleton
 final class Logger
 {
     /**
